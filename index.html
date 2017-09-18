@@ -1,0 +1,54 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    var turn = 'x';
+
+    function checkWin(){
+      console.log('text', $('#m00').text());
+    }
+
+    $('.square').click((e) => {
+      if (turn === 'x'){
+        e.target.innerHTML = 'x';
+        turn = 'o';
+        checkWin();
+      } else {
+        e.target.innerHTML = 'o';    
+        turn = 'x';
+        checkWin()
+      }
+    })
+
+  });
+</script>
+
+<style type="text/css">
+  .square {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin: 10px;
+  display: inline-block;
+}
+</style>
+
+
+<p class="row">
+<div class="square" id="m00"> </div>
+<div class="square" id="m01"> </div>
+<div class="square" id="m02"> </div>
+</p>
+
+<p class="row">
+<div class="square" id="m10"> </div>
+<div class="square" id="m11"> </div>
+<div class="square" id="m12"> </div>
+</p>
+
+<p class="row">
+<div class="square" id="m20"> </div>
+<div class="square" id="m21"> </div>
+<div class="square" id="m22"> </div>
+</p>
