@@ -24,13 +24,23 @@
 
       if (m00 === 'x' && m01 === 'x' && m02 === 'x') {
         $('#win').text('x won!');
-      } else if (m00 === 'o' && m01 === 'o' && m02 === 'o') {
-        $('#win').text('o won!');
       }
+
+      if (m00 === 'o' && m01 === 'o' && m02 === 'o') {
+        $('#win').text('o won!');
+      } 
 
       var m10 = $('#m10').text();
       var m11 = $('#m11').text();
       var m12 = $('#m12').text();
+
+      if (m20 === 'x' && m21 === 'x' && m22 === 'x') {
+        $('#win').text('x won!');
+      }
+
+      if (m20 === 'o' && m21 === 'o' && m22 === 'o') {
+        $('#win').text('o won!');
+      } 
 
       var m20 = $('#m20').text();
       var m21 = $('#m21').text();
@@ -41,12 +51,42 @@
       var m02 = $('#m22').text();
 
       var m01 = $('#m20').text();
-      var m11 = $('#m21').text();
-      var m12 = $('#m22').text();
+      var m11 = $('#m11').text();
+      var m21 = $('#m21').text();
 
       var m02 = $('#m20').text();
-      var m12 = $('#m21').text();
+      var m12 = $('#m12').text();
       var m22 = $('#m22').text();
+
+      if (m00 === 'x' && m01 === 'x' && m02 === 'x') {
+        $('#win').text('x won!');
+      }
+
+      if (m00 === 'o' && m01 === 'o' && m02 === 'o') {
+        $('#win').text('o won!');
+      }
+
+
+
+      if (m01 === 'x' && m11 === 'x' && m12 === 'x') {
+        $('#win').text('x won!');
+      }
+
+      if (m01 === 'o' && m11 === 'o' && m21 === 'o') {
+        $('#win').text('o won!');
+      }
+
+
+
+      if (m02 === 'x' && m12 === 'x' && m22 === 'x') {
+        $('#win').text('x won!');
+      }
+
+      if (m02 === 'o' && m12 === 'o' && m22 === 'o') {
+        $('#win').text('o won!');
+      }
+
+
 
 
     }
