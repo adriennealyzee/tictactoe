@@ -7,15 +7,47 @@
 
     function checkWin(){
       console.log('text', $('#m00').text());
-      
-      // m00, m01, m02
-      // m00, m10, m20
 
-      // for (var i = 0; i < 3; i++) {
-      //   for (var j = 0; j < 3, j++) {
+      // all rows
+      // 00 01 02
+      // 10 11 12
+      // 20 21 22
 
-      //   }
-      // }
+      // all columns
+      // 00 01 02
+      // 01 11 12
+      // 02 12 22
+
+      var m00 = $('#m00').text();
+      var m01 = $('#m01').text();
+      var m02 = $('#m02').text();
+
+      if (m00 === 'x' && m01 === 'x' && m02 === 'x') {
+        $('#win').text('x won!');
+      } else if (m00 === 'o' && m01 === 'o' && m02 === 'o') {
+        $('#win').text('o won!');
+      }
+
+      var m10 = $('#m10').text();
+      var m11 = $('#m11').text();
+      var m12 = $('#m12').text();
+
+      var m20 = $('#m20').text();
+      var m21 = $('#m21').text();
+      var m22 = $('#m22').text();
+
+      var m00 = $('#m20').text();
+      var m01 = $('#m21').text();
+      var m02 = $('#m22').text();
+
+      var m01 = $('#m20').text();
+      var m11 = $('#m21').text();
+      var m12 = $('#m22').text();
+
+      var m02 = $('#m20').text();
+      var m12 = $('#m21').text();
+      var m22 = $('#m22').text();
+
 
     }
 
@@ -45,6 +77,7 @@
   }
 </style>
 
+<div id="win"></div>
 
 <p class="row">
 <div class="square" id="m00"> </div>
@@ -63,3 +96,4 @@
 <div class="square" id="m21"> </div>
 <div class="square" id="m22"> </div>
 </p>
+
